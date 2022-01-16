@@ -3,6 +3,7 @@ require_relative './spec_helper'
 
 RSpec.describe Calculator do
 	let(:calculator) {Calculator.new}
+	let(:range) {Range.new(1,9)}
 
 	it 'exists' do
 		expect(calculator).to be_a(Calculator)
@@ -20,6 +21,12 @@ RSpec.describe Calculator do
 		expect(calculator.alphabet.count).to_not eq(28)
 		expect(calculator.alphabet.count).to eq(27)
 		expect(calculator.alphabet.sample.class).to eq(String)
+	end
+
+	it "can create a random key" do
+		expect(calculator.key_creator).to be_a(Array)
+		expect(calculator.key_creator.sample.class).to eq(Integer)
+		expect(range.include?(calculator.key_creator.length)).to be(true)
 	end
 
 end
