@@ -29,4 +29,11 @@ RSpec.describe Calculator do
 		expect(range.include?(calculator.key_creator.length)).to be(true)
 	end
 
+	it "can change array to a string with leading 0's" do
+		expect(calculator.key_padder([1])).to eq("00001")
+		expect(calculator.key_padder([0, 0, 0, 0, 1])).to eq("00001")
+		expect(calculator.key_padder([1, 2, 3])).to eq("00123")
+		expect(calculator.key_padder([1, 2, 3, 4, 5])).to eq("12345")
+	end
+
 end

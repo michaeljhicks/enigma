@@ -14,4 +14,9 @@ class Calculator
     key
   end
 
+  def key_padder(numbers) #changes array to a string + leading 0's
+    numbers_str = numbers.to_s.delete("[] ,")
+    numbers_str.rjust(5, '0')
+  end
+
 end
