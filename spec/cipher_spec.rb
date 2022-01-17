@@ -65,4 +65,9 @@ require './lib/cipher'
     expect(@cipher.decrypt_sliced_block(['n', 'w', 'u', 'w'], expected)).to eq(['h', 'o', 'w', 'd'])
   end
 
+  it "can decrypt entire message" do
+    expected = [6, 35, 79, 19]
+    expect(@cipher.decrypt_full_message("nwuwdhugxtb", expected)).to eq("howdy world")
+  end
+
 end

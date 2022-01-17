@@ -49,4 +49,11 @@ class Cipher
     end
   end
 
+  def decrypt_full_message(message, shift)
+    slice_message(message).map do |block|
+      decrypt_sliced_block(block, shift)
+    end.join
+  end
+
+
 end
