@@ -31,4 +31,9 @@ require './lib/cipher'
     expect(@cipher.calculate_random_key.to_s.length).to eq(5)
   end
 
+  it "can slice the message" do
+    expect(@cipher.slice_message("howdy world")).to eq([['h', 'o', 'w', 'd'], ['y', ' ', 'w', 'o'], ['r', 'l', 'd']])
+    expect(@cipher.slice_message("HOWDY WORLD")).to eq([['h', 'o', 'w', 'd'], ['y', ' ', 'w', 'o'], ['r', 'l', 'd']])
+  end
+
  end

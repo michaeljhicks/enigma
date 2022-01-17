@@ -15,8 +15,8 @@ class Cipher
     @shift_generator = ShiftGenerator.new
   end
 
-  def method_name
-
+  def slice_message(message)
+    message.downcase.split("").each_slice(4).to_a
   end
 
 end
