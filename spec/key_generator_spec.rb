@@ -11,13 +11,17 @@ require_relative 'spec_helper'
  		expect(@key_generator).to be_a(KeyGenerator)
  	end
 
-  it "generate a random key as an integer" do
-    expect(@key_generator.generate_key).to be_a(Array)
-    expect(@key_generator.generate_key.first.class).to eq(Integer)
-    expect(@key_generator.generate_key.last.class).to eq(Integer)
-    expect(@key_generator.generate_key.sample.class).to eq(Integer)
-    expect(@range.include?(@key_generator.generate_key.length)).to be(true)
+  it "can split return values from generated random keys into separate keys" do
+    expect(@key_generator.generate_key("02715")).to eq([02, 27, 71, 15])
   end
+
+  # it "generate a random key as an integer" do
+  #   expect(@key_generator.generate_key).to be_a(Array)
+  #   expect(@key_generator.generate_key.first.class).to eq(Integer)
+  #   expect(@key_generator.generate_key.last.class).to eq(Integer)
+  #   expect(@key_generator.generate_key.sample.class).to eq(Integer)
+  #   expect(@range.include?(@key_generator.generate_key.length)).to be(true)
+  # end
 
   it "can change array to string with leading 0's" do
     expect(@key_generator.key_padder([1])).to eq("00001")

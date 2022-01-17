@@ -9,4 +9,13 @@ attr_reader :key_generator, :offset_generator
     @offset_generator = OffsetGenerator.new
   end
 
+  def shift_key(five_digit_key, date)
+    five_digit_key = @key_generator.generate_key(five_digit_key)
+    date = @offset_generator.four_digits(@offset_generator.squared_date(date))
+
+    five_digit_key.zip(@offset_generator.generate_offset(date)).map do |pair|
+      pair.sum
+    end
+  end
+
 end
