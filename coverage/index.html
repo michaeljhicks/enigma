@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-01-17T11:25:50-07:00">2022-01-17T11:25:50-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-01-17T11:35:17-07:00">2022-01-17T11:35:17-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="red">
-  80.0%
+  56.41%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.8
+         0.62
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>3</b> files in total.
+    <b>5</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>10</b> relevant lines,
-    <span class="green"><b>8</b> lines covered</span> and
-    <span class="red"><b>2</b> lines missed. </span>
+    <b>39</b> relevant lines,
+    <span class="green"><b>22</b> lines covered</span> and
+    <span class="red"><b>17</b> lines missed. </span>
     (<span class="red">
-  80.0%
+  56.41%
 </span>
 )
   </div>
@@ -82,13 +82,35 @@
           </tr>
         
           <tr class="t-file">
+            <td class="strong t-file__name"><a href="#74cc95381f033fcd18ec5cf160fc9f8799d8e942" class="src_link" title="lib/key_generator.rb">lib/key_generator.rb</a></td>
+            <td class="red strong cell--number t-file__coverage">26.67 %</td>
+            <td class="cell--number">26</td>
+            <td class="cell--number">15</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">0.27</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#46c205465294bb6e72f02f85a87e2540789b2359" class="src_link" title="lib/offset_generator.rb">lib/offset_generator.rb</a></td>
+            <td class="red strong cell--number t-file__coverage">50.00 %</td>
+            <td class="cell--number">19</td>
+            <td class="cell--number">8</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">0.50</td>
+            
+          </tr>
+        
+          <tr class="t-file">
             <td class="strong t-file__name"><a href="#257fb27f6b43063df8d6dd79d40dc8e9504b02b7" class="src_link" title="lib/shift_generator.rb">lib/shift_generator.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">1</td>
-            <td class="cell--number">1</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">7</td>
+            <td class="cell--number">7</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">1.29</td>
             
           </tr>
         
@@ -327,6 +349,563 @@
 </div>
 
       
+        <div class="source_table" id="74cc95381f033fcd18ec5cf160fc9f8799d8e942">
+  <div class="header">
+    <h3>lib/key_generator.rb</h3>
+    <h4>
+      <span class="red">
+  26.67%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>15</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>11</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class KeyGenerator</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def generate_key #creates random key as integer</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="4">
+            
+            
+
+            
+
+            <code class="ruby">    key = []</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby">    numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby">    lengths = [1, 2, 3, 4, 5]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby">    (lengths.sample).times do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">      key &lt;&lt; numbers.sample</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby">    key</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def key_padder(key_nums)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">    string_numbers = key_nums.to_s.delete(&quot;[] ,&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby">    string_numbers.rjust(5, &#39;0&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="18">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def verify_length(key)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby">    if key.size == 5</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby">      true</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby">    else</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby">      false</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="23">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="24">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="25">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="26">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="46c205465294bb6e72f02f85a87e2540789b2359">
+  <div class="header">
+    <h3>lib/offset_generator.rb</h3>
+    <h4>
+      <span class="red">
+  50.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>8</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>4</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class OffsetGenerator</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def squared_date(date)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="4">
+            
+            
+
+            
+
+            <code class="ruby">    (date.to_i ** 2).to_s</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def four_digits(squared_date)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">    squared_date[-4..-1]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def generate_offset(last_four_digits)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="12">
+            
+            
+
+            
+
+            <code class="ruby">    last_four_digits_array = [last_four_digits[0],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="13">
+            
+            
+
+            
+
+            <code class="ruby">    last_four_digits[1],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">    last_four_digits[2],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby">    last_four_digits[3]]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby">    last_four_digits_array.map(&amp;:to_i) #found this on stack overflow. don&#39;t entirely understand it</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="257fb27f6b43063df8d6dd79d40dc8e9504b02b7">
   <div class="header">
     <h3>lib/shift_generator.rb</h3>
@@ -341,8 +920,8 @@
     
 
     <div class="t-line-summary">
-      <b>1</b> relevant lines.
-      <span class="green"><b>1</b> lines covered</span> and
+      <b>7</b> relevant lines.
+      <span class="green"><b>7</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -360,18 +939,18 @@
 
             
 
-            <code class="ruby">class ShiftGenerator</code>
+            <code class="ruby">require_relative &#39;key_generator&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="2">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  </code>
+            
+
+            <code class="ruby">require_relative &#39;offset_generator&#39;</code>
           </li>
         </div>
       
@@ -387,7 +966,95 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="4">
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class ShiftGenerator</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">attr_reader :key_generator, :offset_generator</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def initialize</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="8">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    @key_generator = KeyGenerator.new</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="9">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    @offset_generator = OffsetGenerator.new</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
             
             
 
