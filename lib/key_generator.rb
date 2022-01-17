@@ -15,4 +15,12 @@ class KeyGenerator
     string_numbers.rjust(5, '0')
   end
 
+  def verify_length(key)
+    if key.size == 5
+      true
+    else
+      false
+    end
+  end
+
 end

@@ -27,4 +27,11 @@ require_relative 'spec_helper'
     expect(@key_generator.key_padder([1, 2, 3, 4, 5])).to eq("12345")
   end
 
+  it "can verify key length" do
+    expect(@key_generator.verify_length("12345")).to be(true)
+    expect(@key_generator.verify_length("123456")).to be(false)
+    expect(@key_generator.verify_length("1234")).to be(false)
+
+  end
+
  end
