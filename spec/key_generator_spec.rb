@@ -31,7 +31,6 @@ require_relative 'spec_helper'
     expect(@key_generator.verify_length("12345")).to be(true)
     expect(@key_generator.verify_length("123456")).to be(false)
     expect(@key_generator.verify_length("1234")).to be(false)
-
   end
 
  end
