@@ -1,0 +1,4 @@
+class ShiftGenerator
+  
+
+end
