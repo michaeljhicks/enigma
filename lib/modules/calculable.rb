@@ -1,4 +1,5 @@
 require 'date'
+
 module Calculable
   def calculate_random_key
     random_number = ""

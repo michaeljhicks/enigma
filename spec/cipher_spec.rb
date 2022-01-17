@@ -23,7 +23,12 @@ require './lib/cipher'
 
   it "can create a default date" do
     expect(@cipher.create_date).to be_a(String)
-    expect(@cipher.create_date.length).to eq(6)    
+    expect(@cipher.create_date.length).to eq(6)
+  end
+
+  it "can generate a random 5 digit key" do
+    expect(@cipher.calculate_random_key).to be_a(String)
+    expect(@cipher.calculate_random_key.to_s.length).to eq(5)
   end
 
  end
