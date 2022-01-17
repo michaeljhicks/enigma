@@ -49,10 +49,20 @@ require './lib/cipher'
   end
 
   it "can encrypt entire message" do
-  expected = [6, 35, 79, 19]
-  expect(@cipher.encrypt_full_message("howdy world", expected)).to eq("nwuwdhugxtb")
+    expected = [6, 35, 79, 19]
+    expect(@cipher.encrypt_full_message("howdy world", expected)).to eq("nwuwdhugxtb")
+  end
+
+  it "can decrypt letters" do
+    expect(@cipher.decrypt_letters('n', 6)).to eq('h')
+    expect(@cipher.decrypt_letters('w', 35)).to eq('o')
+    expect(@cipher.decrypt_letters('u', 79)).to eq('w')
+    expect(@cipher.decrypt_letters('w', 19)).to eq('d')
+  end
+
+  it "can decrypt a block of letters" do
+    expected = [6, 35, 79, 19]
+    expect(@cipher.decrypt_sliced_block(['n', 'w', 'u', 'w'], expected)).to eq(['h', 'o', 'w', 'd'])
+  end
+
 end
-
-
-
- end

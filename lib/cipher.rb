@@ -37,5 +37,16 @@ class Cipher
     end.join
   end
 
+  def decrypt_letters(letter, shift)
+    decrypted_hash = Hash[@alphabet.zip(@alphabet.rotate(-shift))]
+    return letter if !decrypted_hash.keys.include?(letter)
+    decrypted_hash.fetch(letter)
+  end
+
+  def decrypt_sliced_block(block, shift_key)
+    block.map.with_index do |letter, index|
+      decrypt_letters(letter, shift_key[index])
+    end
+  end
 
 end
