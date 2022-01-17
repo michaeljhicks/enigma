@@ -48,5 +48,11 @@ require './lib/cipher'
     expect(@cipher.encrypt_sliced_block(['h', 'o', 'w', 'd'], expected)).to eq(['n', 'w', 'u', 'w'])
   end
 
+  it "can encrypt entire message" do
+  expected = [6, 35, 79, 19]
+  expect(@cipher.encrypt_full_message("howdy world", expected)).to eq("nwuwdhugxtb")
+end
+
+
 
  end
