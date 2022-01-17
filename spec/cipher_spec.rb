@@ -43,4 +43,10 @@ require './lib/cipher'
     expect(@cipher.encrypt_letters('d', 19)).to eq('w')
   end
 
+  it "can encrypt a block of letters" do
+    expected = [6, 35, 79, 19]
+    expect(@cipher.encrypt_sliced_block(['h', 'o', 'w', 'd'], expected)).to eq(['n', 'w', 'u', 'w'])
+  end
+
+
  end

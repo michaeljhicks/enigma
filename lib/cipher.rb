@@ -20,9 +20,22 @@ class Cipher
   end
 
   def encrypt_letters(letter, shift)
-    encrypted = Hash[@alphabet.zip(@alphabet.rotate(shift))]
-    return letter if !encrypted.keys.include?(letter)
-    encrypted.fetch(letter)
+    encrypted_hash = Hash[@alphabet.zip(@alphabet.rotate(shift))]
+    return letter if !encrypted_hash.keys.include?(letter)
+    encrypted_hash.fetch(letter)
   end
+
+  def encrypt_sliced_block(block, shift_key)
+    block.map.with_index do |letter, index|
+      encrypt_letters(letter, shift_key[index])
+    end
+  end
+
+  def encrypt_full_message(message, shift)
+    slice_message(message).map do |block|
+      encrypt_sliced_block(block, shift)
+    end.join
+  end
+
 
 end
