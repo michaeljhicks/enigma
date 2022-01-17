@@ -19,4 +19,10 @@ class Cipher
     message.downcase.split("").each_slice(4).to_a
   end
 
+  def encrypt_letters(letter, shift)
+    encrypted = Hash[@alphabet.zip(@alphabet.rotate(shift))]
+    return letter if !encrypted.keys.include?(letter)
+    encrypted.fetch(letter)
+  end
+
 end

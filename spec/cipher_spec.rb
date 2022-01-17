@@ -36,4 +36,11 @@ require './lib/cipher'
     expect(@cipher.slice_message("HOWDY WORLD")).to eq([['h', 'o', 'w', 'd'], ['y', ' ', 'w', 'o'], ['r', 'l', 'd']])
   end
 
+  it "can encrypt letters" do
+    expect(@cipher.encrypt_letters('h', 6)).to eq('n')
+    expect(@cipher.encrypt_letters('o', 35)).to eq('w')
+    expect(@cipher.encrypt_letters('w', 79)).to eq('u')
+    expect(@cipher.encrypt_letters('d', 19)).to eq('w')
+  end
+
  end
