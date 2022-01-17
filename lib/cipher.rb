@@ -10,9 +10,13 @@ class Cipher
 
   def initialize
     @default_key = calculate_random_key
-    @default_date = calculate_date
+    @default_date = create_date
     @alphabet = ("a".."z").to_a << " "
     @shift_generator = ShiftGenerator.new
+  end
+
+  def method_name
+
   end
 
 end

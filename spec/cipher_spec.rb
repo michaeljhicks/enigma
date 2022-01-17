@@ -20,4 +20,10 @@ require './lib/cipher'
     expect(@cipher.default_key.length).to eq(5)
  		expect(@cipher.default_date).to eq("170122")
  	end
+
+  it "can create a default date" do
+    expect(@cipher.create_date).to be_a(String)
+    expect(@cipher.create_date.length).to eq(6)    
+  end
+
  end

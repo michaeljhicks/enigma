@@ -8,7 +8,7 @@ module Calculable
     random_number
   end
 
-  def calculate_date
+  def create_date
     Date.today.strftime('%d%m%y')
   end
 end
